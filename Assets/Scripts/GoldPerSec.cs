@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GoldPerSec : MonoBehaviour {
 
@@ -15,7 +16,7 @@ public class GoldPerSec : MonoBehaviour {
 
     void Update()
     {
-        gpsDisplay.text = GetGoldPerSec() + " gold/sec";
+        gpsDisplay.text = CurrencyConverter.Instance.GetCurrencyIntoString(GetGoldPerSec(), false, false) + " gold/sec";
 
     }
     public float GetGoldPerSec()

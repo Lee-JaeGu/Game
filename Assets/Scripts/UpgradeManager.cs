@@ -14,20 +14,25 @@ public class UpgradeManager : MonoBehaviour {
     public Color standard;
     public Color affordable;
     private float baseCost;
+    private Slider _slider;
 
     private void Start()
     {
         baseCost = cost;
+        _slider = GetComponentInChildren<Slider>();
 
     }
     private void Update()
     {
-        itemInfo.text = itemName + "\nCost: " + cost + "\nPower: +" + clickPower;
+        itemInfo.text = itemName + " (" + count + ")" + "\nCost: " + cost + "\nPower: +" + clickPower;
+        _slider.value = click.gold / cost * 100;
 
-        if(click.gold >= cost)
+        if (_slider.value >= 100)
         {
             GetComponent<Image>().color = affordable;
-        } else {
+        }
+        else
+        {
             GetComponent<Image>().color = standard;
         }
     }

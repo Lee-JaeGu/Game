@@ -11,8 +11,8 @@ public class Click : MonoBehaviour
 
     void Update()
     {
-        goldDisplay.text = "Gold: " + gold.ToString ("F0");
-        gpc.text = goldperclick + " gold/click";
+        goldDisplay.text = "Gold: " + CurrencyConverter.Instance.GetCurrencyIntoString(gold, false, false);
+        gpc.text = CurrencyConverter.Instance.GetCurrencyIntoString(goldperclick, false, true) + " gold/click";
     }
 
     public void Clicked()
