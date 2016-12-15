@@ -24,7 +24,7 @@ public class ItemManager : MonoBehaviour {
 
     private void Update()
     {
-        itemInfo.text = itemName + " (" + count + ")" + "\nCost: " + cost + "\nGold: " + tickValue + "/s";
+        itemInfo.text = itemName + " (" + count + ")" + "\n비용: " + cost + "\n증가량: " + tickValue + "/s";
         /*if (click.gold >= cost)
         {
             GetComponent<Image>().color = affordable;

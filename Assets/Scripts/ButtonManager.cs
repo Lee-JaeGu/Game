@@ -17,7 +17,7 @@ public class ButtonManager : MonoBehaviour
 
     private void Start()
     {
-        
+
         _slider = GetComponentInChildren<Slider>();
 
     }
@@ -36,12 +36,12 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-    public void PurchaseButton()
+    public void PurchaseButtonManager2()
     {
         if (click.gold >= cost)
         {
             click.gold -= cost;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(2);
 
         }
     }

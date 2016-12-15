@@ -24,7 +24,7 @@ public class UpgradeManager : MonoBehaviour {
     }
     private void Update()
     {
-        itemInfo.text = itemName + " (" + count + ")" + "\n비용: " + cost + "\n가격: +" + clickPower;
+        itemInfo.text = itemName + " (" + count + ")" + "\n비용: " + cost + "\n증가량: +" + clickPower;
         _slider.value = click.gold / cost * 100;
 
         if (_slider.value >= 100)
