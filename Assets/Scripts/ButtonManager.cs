@@ -36,7 +36,7 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-    public void PurchaseButtonManager2()
+    public void PurchaseButtonManager()
     {
         if (click.gold >= cost)
         {
