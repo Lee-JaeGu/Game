@@ -41,7 +41,7 @@ public class ButtonManager6 : MonoBehaviour
         if (click.gold >= cost)
         {
             click.gold -= cost;
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(8);
 
         }
     }
